@@ -57,6 +57,13 @@ module "blog_alb" {
     port               = 80
     protocol           = "HTTP"
     target_group_index = 0
+   
+
+    fixed_response = {
+      content_type = "text/plain"
+      message_body = "Fixed response content"
+      status_code  = "200"
+    }
   }
   ]
 
